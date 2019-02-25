@@ -4,8 +4,8 @@ import { getCurrencySymbol, convertCurrency } from '../currency';
 
 export default class Product extends React.Component {
   render() {
-    const { title, price } = this.props;
-    const { currency } = this.context;
+    const { title, price, currency } = this.props;
+    // const { currency } = this.context;
     return (
       <div>
         <h3>{title}</h3>
@@ -22,6 +22,10 @@ export default class Product extends React.Component {
   }
 }
 
-Product.contextTypes = {
+Product.propTypes = {
   currency: PropTypes.string
 };
+
+// Product.contextTypes = {
+//   currency: PropTypes.string
+// };

@@ -5,21 +5,21 @@ import MainContent from './MainContent';
 import PropTypes from 'prop-types';
 
 export default class Page extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      currency: 'gbp'
-    };
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     currency: 'gbp'
+  //   };
+  // }
 
-  getChildContext() {
-    return {
-      currency: this.state.currency,
-      setCurrency: currency => {
-        this.setState({ currency });
-      }
-    };
-  }
+  // getChildContext() {
+  //   return {
+  //     currency: this.state.currency,
+  //     setCurrency: currency => {
+  //       this.setState({ currency });
+  //     }
+  //   };
+  // }
 
   render() {
     return (
@@ -34,7 +34,7 @@ export default class Page extends Component {
   }
 }
 
-Page.childContextTypes = {
-  currency: PropTypes.string,
-  setCurrency: PropTypes.func
-};
+// Page.childContextTypes = {
+//   currency: PropTypes.string,
+//   setCurrency: PropTypes.func
+// };

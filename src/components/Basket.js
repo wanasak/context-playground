@@ -4,8 +4,8 @@ import { getCurrencySymbol, convertCurrency } from '../currency';
 
 export default class Basket extends Component {
   render() {
-    const { items, total } = this.props;
-    const { currency } = this.context;
+    const { items, total, currency } = this.props;
+    // const { currency } = this.context;
     return (
       <div>
         {items} items | {getCurrencySymbol(currency)}
@@ -15,6 +15,8 @@ export default class Basket extends Component {
   }
 }
 
-Basket.contextTypes = {
-  currency: PropTypes.string
-};
+Basket.propTypes = { currency: PropTypes.string };
+
+// Basket.contextTypes = {
+//   currency: PropTypes.string
+// };
